@@ -1,0 +1,25 @@
+
+# Program 3
+
+# NAMESPACE
+
+# As mentioned previously, we need to provide information about what functions
+# are available to the end users of this package in a filed called NAMESPACE.
+
+# To do so, you can type file.create("NAMESPACE") in your console. Then, edit
+# this file as follows:
+
+# Demonstrates 
+
+# demonstrates declaring `ducksay` accessible to package end users
+
+export(ducksay)
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+
+---
+title: "Votes Analysis"
+author: "R Programmer"
+output:
+  html_document:
+    toc: true
+---
+
+# CS50R
+
+## Data visualizing
+
+### Loading library
+
+Here i am going to include _electoral data_ for **Mario**
+and **his freinds**.
+
+
+```{r}
+library(ggplot2)
+```
+
+### Loading data
+
+```{r}
+votes <- read.csv("~/Desktop/CS50's Introduction to Programming with R/data/votes.csv")
+votes
+```
+
+### Displaying data
+
+
+```{r, echo=FALSE}
+ggplot(votes, aes(x = candidate, y = votes)) + 
+  geom_col(aes(fill = candidate)) +
+  scale_fill_viridis_d("Candidate") +
+  scale_y_continuous(limits = c(0, 250)) +
+  labs(
+    x = "Candidate",
+    y = "Votes",
+    title = "Election Results") +
+  theme_classic()  
+```
+
+### Conclusion
+In the end, Mario recieved **`r votes$votes[1]`** votes, Peach recieved **`r votes$votes[2]`** votes, and Bowser
+recieved **`r votes$votes[3]`** votes. The total number of votes was **`r sum(votes$votes)`**.
+
+
+
+
+
